@@ -1,4 +1,4 @@
-````markdown
+
 ```mermaid
 erDiagram
     EMPLOYEES ||--|{ HALL : "manages_as_officer"
