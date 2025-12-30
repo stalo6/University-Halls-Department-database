@@ -1,7 +1,7 @@
 
 ```mermaid
 erDiagram
-    EMPLOYEES ||--|{ HALL : "manages_as_officer"
+    EMPLOYEES ||--|{ HALL : "manages_as_halls_officer"
     EMPLOYEES ||--|{ HOSTEL : "manages_as_custodian"
     HALL ||--|{ HOSTEL : "administrative_grouping_for"
     HOSTEL ||--|{ ROOM : "contains"
@@ -20,7 +20,7 @@ erDiagram
         string hall_name
         decimal fee_rate
         string office_no
-        int officer_employee_id FK
+        int halls_officer_id FK
     }
 
     HOSTEL {
@@ -28,7 +28,7 @@ erDiagram
         string hostel_name
         string occupant_gender
         int hall_id FK
-        int custodian_employee_id FK
+        int custodian_id FK
     }
 
     ROOM {
